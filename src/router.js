@@ -16,14 +16,16 @@ const router = new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: "/dashboard",
-      component: AppDashboard,
-      meta: {
-        forAuth: true
-      }
+        path: "/dashboard",
+        name: "AppDashboard",
+        component: AppDashboard,
+        meta: {
+          forAuth: true
+       }
     },
     {
       path: "/login",
+        name: "AppLogin",
       component: AppLogin,
       meta: {
         forVisitors: true

@@ -1,6 +1,8 @@
 <template>
   <div>
-    <app-toolbar/>
+    <AppToolbar/>
+
+
   </div>
 </template>
 
@@ -10,6 +12,11 @@ export default {
   name: "AppDashboard",
   components: {
     AppToolbar
+  },
+  updated: function() {
+    if (!this.$auth.isAuthenticated()) {
+      this.$router.push("/login");
+    }
   }
 };
 </script>
