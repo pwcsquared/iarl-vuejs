@@ -12,4 +12,4 @@ Vue.use(Auth);
 new Vue({
   router,
   render: h => h(App)
-}).$mount("#App");
+}).$mount("#app");
